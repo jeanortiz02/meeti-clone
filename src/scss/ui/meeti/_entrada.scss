@@ -1,0 +1,27 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.entradas {
+
+    &__heading {
+        @include m.heading;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    &__grid {
+        @include m.grid (1, 2rem);
+
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: 4fr 2fr;
+        }
+    }
+}
+
+.entrada {
+
+    &__texto {
+        padding: 0 1rem;
+    }
+}
